@@ -1,12 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Michael Gosling</title>
-  </head>
-  <body>
-    Welcome!
-  </body>
+<html>
+    <head>
+        <title>Michael Gosling</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+        <style>
+            body {
+                background-color: #434C5E;
+                color: #D8DEE9;
+                text-align: center;
+            }
+            header, h1, h2, h3, h4, h5, h6 {
+                font-family: 'Raleway', sans-serif;
+            }
+            .main-header {
+                font-size: 64;
+                margin-bottom: 0;
+                margin-top: 10rem;
+                color: #ECEFF4;
+                font-weight: 100;
+            }
+            .subtitle {
+                margin-top: 0;
+                font-weight: 100;
+                margin-bottom: 3rem;
+            }
+            .social-icon {
+                max-width: 64px;
+                filter: url(#body-text-color-filter);
+            }
+            nav > a:hover > img {
+                filter: url(#social-icon-hover-color);
+            }
+            nav > a {
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="main-header">Michael Gosling</header>
+        <h2 class="subtitle">Software Developer</h2>
+        <nav>
+            <a href="https://github.com/michaelgosling" target="_blank">
+                <img class="social-icon" src="assets/logos/GitHub-Mark-Light-64px.png" alt="GitHub Profile Link">
+            </a>
+            <a href="https://www.linkedin.com/in/mgosling94/" target="_blank">
+                <img class="social-icon" src="assets/logos/In-White-128.png" alt="LinkedIn Profile Link">
+            </a>
+            <a href="mailto:mgosling94@gmail.com">
+                <img class="social-icon" src="assets/logos/email.png" alt="Email Link">
+            </a>
+        </nav>
+
+        <!-- SVG Filters -->
+        <svg>
+            <defs>
+                <!-- Sets color to same as body text color (#D8DEE9) -->
+                <filter id="body-text-color-filter" color-interpolation-filters="sRGB">
+                    <feColorMatrix type="matrix" values="0 0 0 0 .847
+                                                         0 0 0 0 .870
+                                                         0 0 0 0 .914
+                                                         0 0 0 1 0"   />
+                </filter>
+                <!-- Sets color to a darker color than bg but similar (#2E3440) -->
+                <filter id="social-icon-hover-color" color-interpolation-filters="sRGB">
+                    <feColorMatrix type="matrix" values="0 0 0 0 .180
+                                                         0 0 0 0 .204
+                                                         0 0 0 0 .251
+                                                         0 0 0 1 0"   />
+                </filter>
+            </defs>
+        </svg>
+
+    </body>
 </html>
