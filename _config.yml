@@ -31,6 +31,7 @@ plugins:
 header_pages:
   - index.md
   - blog.md
+  - links.md
 
 style: dark
 listen_for_clients_preferred_style: true
