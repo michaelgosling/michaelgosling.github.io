@@ -1,6 +1,12 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: page
+title: Home
 ---
+
+Hey there!
+
+My name is Michael Gosling, and I've been developing software profesionally since May 2019. I graduated from Nova Scotia Community College in 2019 with a diploma in IT Programming and have been working since.
+
+On this site you'll find a blog where I \[infrequently\] post about my hobby work as well as some links to my socials and previous work.
+
+:)
