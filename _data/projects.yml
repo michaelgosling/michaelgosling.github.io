@@ -1,0 +1,13 @@
+- title: Test Project Title
+  date: 2022-10-27 09:30:00 -0300
+  description: a test description
+  skills:
+    - Jekyll
+    - GitHub Codespaces
+- title: Test Project title 2
+  date: 2022-10-27 09:36:00 -0300
+  description: a test description 2
+  skills:
+    - Jekyll
+    - GitHub Codespace
+    - YAML

@@ -30,6 +30,7 @@ plugins:
 # Theme Config
 header_pages:
   - index.md
+  - projects.md
   - blog.md
   - links.md
 
