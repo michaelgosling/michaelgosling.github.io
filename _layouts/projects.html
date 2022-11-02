@@ -7,7 +7,7 @@ layout: page
     {%- for project in site.data.projects -%}
     <div id="project-card">
       <h2>{{ project.title | escape }}</h2>
-      {%- assign date_format = "%Y-%m-%d" -%}
+      {%- assign date_format = "%B %Y" -%}
       [ {{ project.date | date: date_format }} ]
       
       <p>{{project.description}}</p>
