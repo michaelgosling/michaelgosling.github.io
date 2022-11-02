@@ -32,6 +32,33 @@ header p { text-align: left;  margin: 0; }
 footer { margin-bottom: 20px; }
 
 /**
+ * Page-specific Layout
+ */
+// Projects Page
+// #project-card-image-container {
+//   width: 100%;
+// }
+.project-card-header {
+  margin-bottom: 0.5rem;
+}
+.project-card-title {
+  margin-top: 0.5rem !important;
+}
+.project-card-divider {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 90%;
+  opacity: 0.5;
+}
+.project-card-divider hr {
+  border-top: var(--border);
+  border-bottom: none;
+}
+.project-card-skills {
+  opacity: 0.85;
+}
+
+/**
  * Highlight/Markup
  */
 ::selection { background: var(--selection-background);  color: var(--selection-text); }

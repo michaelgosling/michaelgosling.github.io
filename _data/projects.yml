@@ -1,13 +1,15 @@
-#- title: Test Project Title
-#  date: 2022-10-27 09:30:00 -0300
-#  description: a test description
-#  skills:
-#    - Jekyll
-#    - GitHub Codespaces
-#- title: Test Project title 2
-#  date: 2022-10-27 09:36:00 -0300
-#  description: a test description 2
-#  skills:
-#    - Jekyll
-#    - GitHub Codespace
-#    - YAML
+- title: Trail Mix (Ludum Dare 46 Entry)
+  repo_url: https://github.com/michaelgosling/LD46_Trail_Mix
+  date: 2020-04-20
+  image: trail-mix_logo.jpg
+  description: A Unity2D game for Ludum Dare 46, about a raccoon carrying a bunny to safety. The player plays as the raccoon and must toss the bunny into the air in order to jump freely and progress through the level, but if the bunny touches the ground its game over.
+  skills:
+    - Unity
+    - C#
+# - title: Test Project title 2
+#   date: 2022-10-27 09:36:00 -0300
+#   description: a test description 2
+#   skills:
+#     - Jekyll
+#     - GitHub Codespace
+#     - YAML

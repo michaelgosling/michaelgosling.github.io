@@ -5,14 +5,29 @@ layout: page
 {%- if site.data.projects.size > 0 -%}
   <div id="projects">
     {%- for project in site.data.projects -%}
-    <div id="project-card">
-      <h2>{{ project.title | escape }}</h2>
-      {%- assign date_format = "%B %Y" -%}
-      [ {{ project.date | date: date_format }} ]
-      
-      <p>{{project.description}}</p>
-      <!-- TODO: project.url | relative_url -->
+    <div class="project-card">
+      <div class="project-card-header">
+        {%- if project.image -%}<center><img width="50%" src="/assets/images/{{ project.image }}" ></center>{%- endif -%}
+        <h1 class="project-card-title">{{ project.title | escape }}</h1>
+        {%- assign date_format = "%B %Y" -%}
+        <i>{{ project.date | date: date_format }}</i>
+        <br>
+      </div>
+      <div class="project-card-description">
+        <p>{{project.description}}</p>
+      </div>
+      <div class="project-card-footer">
+        {%- if project.repo_url -%}
+        <a href="{{project.repo_url}}">Source Repo</a> 
+        {%- endif -%}
+        <br>
+        {%- if project.skills.size > 0 -%}
+        {% comment %} TODO: pick lighter text color for skills to differentiate them visually {% endcomment %}
+        <div class="project-card-skills">{%- for skill in project.skills -%}[{{ skill }}]{%- endfor -%}</div>
+        {%- endif -%}
+      </div>
     </div>
+    {% unless forloop.last %}<center><div class="project-card-divider"><hr></div></center>{% endunless %}
     {%- endfor -%}
   </div>
 {%- endif -%}
