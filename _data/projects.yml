@@ -1,3 +1,13 @@
+- title: OC (Operational Controls)
+  website: https://vmo.aero/operational-control/
+  start_date: 2019-05-20
+  end_date: 2021-05-21
+  description: An Operational Controls software for airlines, where they can manage crew schedules and flights. One of the projects I worked on during my time at Vmo Solutions. You can find images and more details about OC at Vmo's website linked above.
+  skills:
+    - React.js
+    - AWS
+    - TypeScript
+    - MongoDB
 - title: Trail Mix (Ludum Dare 46 Entry)
   repo_url: https://github.com/michaelgosling/LD46_Trail_Mix
   date: 2020-04-20

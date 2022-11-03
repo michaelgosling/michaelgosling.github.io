@@ -2,32 +2,45 @@
 layout: page
 ---
 
+<h1 class="page-title-header">{{ page.title }}</h1>
+
+<p>
+  On this page you'll find an assortment of projects I've worked on in the past, though not comprehensive. The list has links where applicable but you can find all my public repos on my <a href="https://github.com/michaelgosling">GitHub</a>.
+</p>
+
 {%- if site.data.projects.size > 0 -%}
   <div id="projects">
     {%- for project in site.data.projects -%}
+    <center><div class="project-card-divider"><hr></div></center>
     <div class="project-card">
       <div class="project-card-header">
         {%- if project.image -%}<center><img width="50%" src="/assets/images/{{ project.image }}" ></center>{%- endif -%}
         <h1 class="project-card-title">{{ project.title | escape }}</h1>
         {%- assign date_format = "%B %Y" -%}
-        <i>{{ project.date | date: date_format }}</i>
+        <i>
+          {%- if project.date -%}
+          {{ project.date | date: date_format }}
+          {%- elsif project.start_date and project.end_date -%}
+          {{ project.start_date | date: date_format }} - {{ project.end_date | date: date_format }}
+          {%- endif -%}
+        </i>
         <br>
+        {%- if project.repo_url -%}
+        <a href="{{project.repo_url}}">Source Repo</a> 
+        {%- elsif project.website -%}
+        <a href="{{project.website}}">Website</a>
+        {%- endif -%}
       </div>
       <div class="project-card-description">
         <p>{{project.description}}</p>
       </div>
       <div class="project-card-footer">
-        {%- if project.repo_url -%}
-        <a href="{{project.repo_url}}">Source Repo</a> 
-        {%- endif -%}
-        <br>
         {%- if project.skills.size > 0 -%}
         {% comment %} TODO: pick lighter text color for skills to differentiate them visually {% endcomment %}
         <div class="project-card-skills">{%- for skill in project.skills -%}[{{ skill }}]{%- endfor -%}</div>
         {%- endif -%}
       </div>
     </div>
-    {% unless forloop.last %}<center><div class="project-card-divider"><hr></div></center>{% endunless %}
     {%- endfor -%}
   </div>
 {%- endif -%}
